@@ -4,13 +4,13 @@ velocidade = float(input("Velocidade contratada em Mbps: "))
 
 #PROCESSAMENTO DE DADOS
 if velocidade < 50:
-    plano = "Plano básico"
+    plano = "Plano Básico"
 elif velocidade >= 50 and velocidade <= 199:
-    plano = "Plano intermediário"
+    plano = "Plano Intermediário"
 elif velocidade >= 200 and velocidade <= 499:
-    plano = "Plano avançado"
+    plano = "Plano Avançado"
 else:
-    plano = "Plano ultra"
+    plano = "Plano Ultra"
 
 #SAIDA DE DADOS
 print(" ")
