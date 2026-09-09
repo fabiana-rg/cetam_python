@@ -1,7 +1,7 @@
 #ENTRADA DE DADOS
 
 nome_aluno = str(input("Nome: "))
-idade = int(input("Idades:"))
+idade = int(input("Idade:"))
 cadrastro = str(input("Possui cadrastro, (sim ou não): "))
 
 
@@ -13,7 +13,7 @@ elif idade < 17  or idade > 14 and cadrastro == "sim":
 elif idade < 14 and cadrastro == "sim":
     situacao = "Acesso permitido somente com acompanhanto."
 else:
-    situacao = "Acesso negado"
+    situacao = "Acesso negado."
 
 #SAIDA DE DADOS
 print(" ")
