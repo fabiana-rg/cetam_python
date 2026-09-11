@@ -1,0 +1,15 @@
+C:\Users\Aluno\Documents cd 'Arquivos onde os codigos estão salvos' - entrar na pasta onde estão os codigos em python
+git init - criar um repositório Git do zero
+git add . - adicionar / prepara todos os arquivos modificados ou novos na sua pasta atual para serem salvos no próximo registro histórico
+git commit -m "Comentários (algo como 'enviando codigos' para nuvem)" - serve para salvar as alterações do seu código no histórico do Git
+git status - mostra a situação atual dos seus arquivos, dizendo se eles foram modificados, se estão prontos para serem salvos ou se o Git ainda nem os conhece
+git branch -M main - usado para forçar a renomeação da sua ramificação (branch) atual para main
+--Ir no site do GitHub, crie um novo repositório e copie o link dele (o link termina com .git)[caso já tenha o reposito, entre]. Depois, use o comando abaixo para conectar a sua pasta local ao servidor do GitHub: 
+git remote add origin https://github.com/user/repositorio.git
+git push -u origin main - empurra (push) para enviar todos os seus arquivos salvos para a nuvem
+---auteutenticação... - autorizar o navegador 
+pronto
+
+git add .
+git commit -m "comentário"
+git push u origin main

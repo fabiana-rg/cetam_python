@@ -1,0 +1,14 @@
+Linguagem de programação (Python)
+
+print > imprime o mensagem na tela (print("Olá, mundo!)) 
+# > comentario no codigo/aviso/explicação
+concatenar > quando somamos informações (print("Olá", nome, "seja bem vindo!"))
+
+str > textos
+int > numeros inteiros
+float > numeros decimais
+bool > armazena apenais dois valores lógicos: verdadeiro(True) ou falso(False)
+
+type > identifica o tipo da variavel
+
+
