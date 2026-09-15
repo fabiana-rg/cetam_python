@@ -1,5 +1,8 @@
 # PROVA
- 
+from datetime import datetime
+
+ano_atual = datetime.now().year
+
 continua = True 
 
 for i in range(5):
@@ -24,7 +27,12 @@ for i in range(5):
             for i in range(qtd_livro_cadastrada):
                 i += 1
                 
-                cod_livro = int(input("\nCódigo do livro: "))
+                cod_livro = (input("\nCódigo do livro: "))
+                if cod_livro == "" or not cod_livro.isdigit():
+                    print("Erro: Código deve ser válido.")
+                    valido = False
+                else:
+                    cod_livro = int(cod_livro)
                 
                 titulo_livro = str(input("Título do livro: "))
                 if titulo_livro == "":
@@ -43,8 +51,8 @@ for i in range(5):
                 else:
                     ano_publicacao = int(ano_publicacao)
 
-                    if ano_publicacao < 0 or ano_publicacao > 2026: #PESQUISAR  SOBRE ANO ATUAL 
-                        print("Erro: Ano deve ser válido.")
+                    if ano_publicacao < 0 or ano_publicacao > ano_atual:
+                        print(f"Erro: Ano deve ser entre 0 e {ano_atual}.")
                         valido = False
 
                 qtd_disponivel = int(input("Quantidade disponível: "))
