@@ -11,4 +11,43 @@ bool > armazena apenais dois valores lógicos: verdadeiro(True) ou falso(False)
 
 type > identifica o tipo da variavel
 
+LISTAS
+len() - tamanho da lista (ex: print(len(nomes) )
+.append() - adiciona um elemento no final (ex: nomes.append("Maria") )
+.insert() - insere na posição específica (ex: nomes.insert(1, "Lucas") )
+.remove() - remove da lista quando se sabe o valor (ex: nomes.remove("Pedro") )
+.pop() - remove da lista quando se sabe a posição (ex:nomes.pop(0) )
+
+enumerate() - serve para percorrer uma lista 
+(ex: frutas = ["maçã", "banana", "uva"]
+	for indice, valor in enumerate(frutas):
+    		print(indice, valor)  
+# 0 maçã
+# 1 banana
+# 2 uva	)
+
+OPERAÇÃO - EXEMPLO - FINALIDADE
+
+Verificar se existe - "Ana" in nomes ------ Retorna True ou False.
+Contar ocorrências -- notas.count(7) ------ Conta quantas vezes o valor aparece.
+Encontrar posição --- nomes.index("Ana") -- Retorna o índice do valor.
+Ordenar ------------- nomes.sort() -------- Ordena a própria lista.
+Copiar -------------- nova = nomes.copy() - Cria uma cópia.
+
+
+
+
+
+
+
+==FORMATAÇÃO DE STRING
+
+.lower() - string transformada toda em minúscula
+.upper() - string transformada toda em maiúscula
+.title() - string com a primeira letra maiúscula
+.capitalize() - deixa apenas a primeira letra da frase em maiúscula e o resto minúsculo
+.strip() - tira os espaços no começo e no fim da string 
+.replace() - troca uma palavra/não palavra por outra (ex: "Eu amo pizza".replace("pizza", "Python") vira "Eu amo Python") 
+.slip() - transforma uma frase em pedaços e guarda dentro de uma lista, usando o espaço ou caractere como corte
+ 
 
