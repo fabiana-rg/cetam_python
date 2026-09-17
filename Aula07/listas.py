@@ -1,5 +1,8 @@
 nomes = ["Ana", "Carlos", "João"]
 
+for contador in nomes:
+    print(contador)
+
 print(nomes[0]) # Ana
 print(nomes[2]) # João
 

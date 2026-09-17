@@ -1,20 +1,14 @@
 notas = []
-"""
+
 for i in range(5):
-    float(input(f"Digite {i+1}ª nota: "))
+    nota = float(input(f"Digite nota {i+1}: "))
+    notas.append(nota)
 
-nota1 = float(input("Digite nota: "))
-nota2 = float(input("Digite nota: "))
-nota3 = float(input("Digite nota: "))
-nota4 = float(input("Digite nota: "))
-nota5 = float(input("Digite nota: "))
 
-print(notas)"""
+for nota in notas:
+    print(nota)
 
-notas.append(nota1)
-notas.append(nota2)
-notas.append(nota3)
-notas.append(nota4)
-notas.append(nota5)
+print(f"Quantidade de notas na lista: {len(notas)}")
 
-print(notas)
+print(f"A maior nota é {max(notas)} e a menor nota é {min(notas)}.")
+
