@@ -1,7 +1,6 @@
 # PROVA
 from datetime import datetime
 
-biblioteca = []
 
 ano_atual = datetime.now().year
 
