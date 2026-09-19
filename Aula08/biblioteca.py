@@ -11,3 +11,19 @@ while True:
     print("6 - Sair")
 
     opcao = input("Escolha uma opação: ")
+    
+#cadastrar
+
+    if opcao == "1":
+        
+        codigo = int(input("Código do livro: "))
+        
+        existe = False
+        
+        for livro in biblioteca:
+            if livro[0] == codigo:
+                existe = True
+        
+        if existe:
+            print("Código já cadasdrado!")
+        
