@@ -13,7 +13,18 @@ while True:
     opcao = input("Escolha uma opção: ")
 #BUSCA
     if opcao == "1":
-        pass
+        pesquisa = input("Pesquisar livro: ")
+        encontrado = False
+
+        for livro in biblioteca:
+            if livro["Código"] == pesquisa:
+                print("Livro encontrado")
+                encontrado = True
+                break
+
+
+
+
     
 #CHAMADA 
     elif opcao == "2":        
