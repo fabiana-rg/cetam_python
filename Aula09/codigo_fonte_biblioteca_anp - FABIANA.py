@@ -36,7 +36,7 @@ while True:
 # Pesquisa de livro
     elif opcao == "3":
 
-        pesquisa = input("Digite o título que deseja pesquisar: ")
+        pesquisa = input("Digite o título que deseja pesquisar: ") #Adicionar formatação .lower
         #Alteração: Variável para mostrar se o livro existe na lista
         livro_encontrado = False 
 
