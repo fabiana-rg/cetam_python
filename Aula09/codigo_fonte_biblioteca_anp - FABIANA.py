@@ -17,8 +17,8 @@ while True:
 # Cadastro de livro
     if opcao == "1":
 
-        titulo = input("Digite o título: ")
-        autor = input("Digite o autor: ")
+        titulo = input("Digite o título: ").lower()
+        autor = input("Digite o autor: ").lower()
 
         livros.append([titulo, autor])
 
@@ -29,14 +29,17 @@ while True:
 
         print("\n--- LIVROS CADASTRADOS ---")
 
+        if len(livros) == 0:
+            print("Nenhum livro cadrastrado ainda.")
+
         for contador in livros:
-            print("Título:", contador[0])
-            print("Autor:", contador[1])
+            print("Título:", contador[0].title())
+            print("Autor:", contador[1].title())
 
 # Pesquisa de livro
     elif opcao == "3":
 
-        pesquisa = input("Digite o título que deseja pesquisar: ") #Adicionar formatação .lower
+        pesquisa = input("Digite o título que deseja pesquisar: ").lower() #Adicionar formatação .lower
         #Alteração: Variável para mostrar se o livro existe na lista
         livro_encontrado = False 
 
@@ -44,8 +47,8 @@ while True:
             if contador[0] == pesquisa:
                 livro_encontrado = True  # Alteração: Validar se o livro for encontrado
                 print("Livro encontrado!")
-                print("Título:", contador[0])
-                print("Autor:", contador[1])
+                print("Título:", contador[0].title())
+                print("Autor:", contador[1].title())
         # Alteração: If para mostrar o livro que não encontrado
         if livro_encontrado == False:
             print("Livro não encontrado.")
@@ -53,7 +56,7 @@ while True:
 # Exclusão de livro
     elif opcao == "4":
 
-        pesquisa = input("Digite o título que deseja excluir: ")
+        pesquisa = input("Digite o título que deseja excluir: ").lower()
         # Alteração: Variável para mostrar se o livro existe na lista
         livro_encontrado = False
 
