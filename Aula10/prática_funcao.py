@@ -34,3 +34,11 @@ def buscar_livro():
             print(f"Título: {contador[0]}, Autor: {contador[1]}")
 
 buscar_livro()
+
+# Desafio 5: crie remover_livro() para retirar um registro da lista.
+
+def remover_livro():
+    titulo = input("Digite o titulo do livro que deseja remover: ")
+    biblioteca.remove(titulo)
+
+remover_livro
