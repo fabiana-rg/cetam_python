@@ -1,3 +1,5 @@
+import os
+
 livros = []
 
 # Cadrastro
@@ -60,6 +62,7 @@ def Quantidade_livro():
 
 def Menu_livros():
     while True:
+        os.system("cls")
 
         print("\n===== SISTEMA DE LIVROS =====")
         print("1 - Cadrastrar livro")
@@ -73,21 +76,27 @@ def Menu_livros():
 
         if opcao == "1":
             Cadastrar_livro()
+            input("\nPressione ENTER para voltar ao menu...")
 
         elif opcao == "2":
             Listar_livro()
+            input("\nPressione ENTER para voltar ao menu...")
         
         elif opcao == "3":
             Pesquisar_livro()
+            input("\nPressione ENTER para voltar ao menu...")
 
         elif opcao == "4":
             Excluir_livro()
+            input("\nPressione ENTER para voltar ao menu...")
 
         elif opcao == "5":
             Quantidade_livro()
+            input("\nPressione ENTER para voltar ao menu...")
     # Encerramento     
         elif opcao == "6":
             break
         
         else:
             print("Opção inválida!")
+            input("\nPressione ENTER para voltar ao menu...")

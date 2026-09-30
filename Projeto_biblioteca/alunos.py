@@ -1,3 +1,5 @@
+import os
+
 alunos = []
 
 # Cadastro de aluno
@@ -82,6 +84,7 @@ def Quantidade_aluno():
 
 def Menu_alunos():
     while True:
+        os.system("cls")
 
         print("\n===== SISTEMA DE ALUNOS =====")
         print("1 - Cadastrar aluno")
@@ -95,22 +98,27 @@ def Menu_alunos():
 
         if opcao == "1":
             Cadastrar_aluno()
+            input("\nPressione ENTER para voltar ao menu...")
 
         elif opcao == "2":
             Listar_aluno()
+            input("\nPressione ENTER para voltar ao menu...")
 
         elif opcao == "3":
             Pesquisar_aluno()
+            input("\nPressione ENTER para voltar ao menu...")
 
         elif opcao == "4":
             Excluir_aluno()
+            input("\nPressione ENTER para voltar ao menu...")
 
         elif opcao == "5":
             Quantidade_aluno()
+            input("\nPressione ENTER para voltar ao menu...")
 
         elif opcao == "6":
-            print("Programa encerrado.")
             break
 
         else:
             print("Opção inválida!")
+            input("\nPressione ENTER para voltar ao menu...")
