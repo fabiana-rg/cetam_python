@@ -1,5 +1,10 @@
 import os
 
+class Aluno:
+    def __init__(self, nome, matricula):
+        self.nome = nome
+        self.matricula = matricula
+
 alunos = []
 
 # Cadastro de aluno
@@ -18,14 +23,16 @@ def Cadastrar_aluno():
     matricula_encontrada = False
 
     for contador in alunos:
-        if contador[1] == matricula:
+        #if contador[1] == matricula:
+        if contador.matricula == matricula:
             matricula_encontrada = True
 
     if matricula_encontrada == True:
         print("Essa matrícula já está cadastrada!")
         2
     else:
-        alunos.append([nome, matricula])
+        #alunos.append([nome, matricula])
+        alunos.append(Aluno(nome, matricula))
         print("Aluno cadastrado!")
 
 # Listagem de alunos
@@ -36,8 +43,11 @@ def Listar_aluno():
         print("Nenhum aluno cadastrado ainda.")
 
     for contador in alunos:
-        print("Nome:", contador[0].title())
-        print("Matrícula:", contador[1],)
+        #print("Nome:", contador[0].title())
+        #print("Matrícula:", contador[1],)
+        print("Nome:", contador.nome.title())
+        print("Matrícula:", contador.matricula)
+        
         
 # Pesquisa de aluno
 def Pesquisar_aluno():
@@ -50,11 +60,14 @@ def Pesquisar_aluno():
     aluno_encontrado = False
 
     for contador in alunos:
-        if contador[1] == pesquisa:
+        #if contador[1] == pesquisa:
+        if contador.matricula == pesquisa:
             aluno_encontrado = True
             print("Aluno encontrado!")
-            print("Nome:", contador[0].title())
-            print("Matrícula:", contador[1])
+            #print("Nome:", contador[0].title())
+            #print("Matrícula:", contador[1])
+            print("Nome:", contador.nome.title())
+            print("Matrícula:", contador.matricula)
 
     if aluno_encontrado == False:
         print("Aluno não encontrado.") 
@@ -70,9 +83,10 @@ def Excluir_aluno():
     aluno_encontrado = False
 
     for contador in alunos:
-        if contador[1] == pesquisa:
+        #if contador[1] == pesquisa:
+        if contador.matricula == pesquisa:
             aluno_encontrado = True
-            alunos.remove(contador)
+            alunos.remove(contador)######modificar
             print("Aluno excluído!")
 
     if aluno_encontrado == False:

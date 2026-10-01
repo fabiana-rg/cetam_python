@@ -1,13 +1,19 @@
 import os
 
+class Livro:
+    def __init__(self, titulo, autor):
+        self.titulo = titulo
+        self.autor = autor
+
 livros = []
 
 # Cadrastro
 def Cadastrar_livro():
     titulo = input("Digite o título: ").lower()
     autor = input("Digite o autor: ").lower()
-
-    livros.append([titulo, autor])
+    
+    #livros.append([titulo, autor])
+    livros.append(Livro(titulo, autor))
 
     print("Livro cadastrado!")
 
@@ -19,8 +25,10 @@ def Listar_livro():
         print("Nenhum livro cadrastrado ainda.")
 
     for contador in livros:
-        print("Título:", contador[0].title())
-        print("Autor:", contador[1].title())
+        #print("Título:", contador[0].title())
+        #print("Autor:", contador[1].title())
+        print("Título:", contador.titulo.title())
+        print("Autor:", contador.autor.title())
         print("")
 
 # Pesquisa de livro
@@ -30,12 +38,14 @@ def Pesquisar_livro():
     livro_encontrado = False 
 
     for contador in livros:
-        if contador[0] == pesquisa:
+        #if contador[0] == pesquisa:
+        if contador.titulo == pesquisa:
             livro_encontrado = True  
             print("Livro encontrado!")
-            print("Título:", contador[0].title())
-            print("Autor:", contador[1].title())
-
+            #print("Título:", contador[0].title())
+            #print("Autor:", contador[1].title())
+            print("Título:", contador.titulo.title())
+            print("Autor:", contador.autor.title())
        
     if livro_encontrado == False:
         print("Livro não encontrado.")
@@ -48,9 +58,10 @@ def Excluir_livro():
     livro_encontrado = False
 
     for contador in livros:
-        if contador[0] == pesquisa:
+        if contador.titulo == pesquisa:
+        #if contador[0] == pesquisa:
             livro_encontrado = True  
-            livros.remove(contador)
+            livros.remove(contador) ######modificar
             print("Livro excluído!")
         
     if livro_encontrado == False:
