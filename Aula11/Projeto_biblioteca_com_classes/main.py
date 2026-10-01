@@ -3,8 +3,11 @@ import livros
 import alunos
 import emprestimo
 
-while True:
+def Limpar_tela():
     os.system("cls")
+
+while True:
+    Limpar_tela()
 
     print("\n===== SISTEMA DE BIBLIOTECA =====")
     print("1 - Sistema de livros")
